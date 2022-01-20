@@ -1,14 +1,15 @@
+1. 멤버테이블
 create table member(
-id varchar2(20),
-pwd varchar2(10),
-name varchar2(20),
-gender varchar2(10),
-birth date,
-is_lunar varchar2(10),
-cphone varchar2(15),
-email varchar2(30),
-habit varchar2(30),
-regdate date --조인한날짜
+id varchar2(20), --아이디
+pwd varchar2(10), --비밀번호
+name varchar2(20), --이름
+gender varchar2(10), --성별
+birth date, --생년월일
+is_lunar varchar2(10), --양력음력
+cphone varchar2(15), --전화번호
+email varchar2(30), --이메일
+habit varchar2(30), --취미
+regdate date --가입날짜(오늘)
 );
 
 select * from member;
@@ -17,12 +18,14 @@ insert into member(id,pwd) values('blue1','111');
 commit;
 
 ----------------------------
+2. 노티스테이블
 create table notices(
-seq varchar2(10),
-title varchar2(30),
-writer varchar2(20),
-regdate date,
-hit number );
+seq varchar2(10), --글번호
+title varchar2(30), --제목
+writer varchar2(20), --작성자
+regdate date, --작성일(오늘)
+hit number --조회수
+);
 
 select *from notices;
 select *from notices order by to_number(seq) desc;
@@ -32,10 +35,10 @@ alter table notices add (content varchar2(1000));
 
 commit;
 
-insert into notices values ('1','title1','cj',sysdate,0);
-insert into notices values ('2','title2','cj',sysdate,0);
+insert into notices values ('1','title1','sj',sysdate,0);
+insert into notices values ('2','title2','sj',sysdate,0);
 
-
-alter table notices add (content varchar2(1000));
-alter table notices add (filesrc varchar2(100));
+<!-- content, filesrc를 추가 -->
+alter table notices add (content varchar2(1000)); --본문내용
+alter table notices add (filesrc varchar2(100)); -- 파일첨부
 
