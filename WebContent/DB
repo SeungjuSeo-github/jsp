@@ -1,0 +1,41 @@
+create table member(
+id varchar2(20),
+pwd varchar2(10),
+name varchar2(20),
+gender varchar2(10),
+birth date,
+is_lunar varchar2(10),
+cphone varchar2(15),
+email varchar2(30),
+habit varchar2(30),
+regdate date --조인한날짜
+);
+
+select * from member;
+
+insert into member(id,pwd) values('blue1','111');
+commit;
+
+----------------------------
+create table notices(
+seq varchar2(10),
+title varchar2(30),
+writer varchar2(20),
+regdate date,
+hit number );
+
+select *from notices;
+select *from notices order by to_number(seq) desc;
+select *from notices order by to_number(seq);
+select *from notices where seq = '1';
+alter table notices add (content varchar2(1000));
+
+commit;
+
+insert into notices values ('1','title1','cj',sysdate,0);
+insert into notices values ('2','title2','cj',sysdate,0);
+
+
+alter table notices add (content varchar2(1000));
+alter table notices add (filesrc varchar2(100));
+
