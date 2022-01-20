@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>noticeDetail.jsp</title>
+<title>noticeDetail16.jsp</title>
 <link rel="stylesheet" href="../css/nstyle.css"/>
 </head>
 <body>

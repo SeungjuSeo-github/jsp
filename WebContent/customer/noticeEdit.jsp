@@ -10,12 +10,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>noticeEdit16.jsp</title>
 <link rel="stylesheet" href="../css/nstyle.css"/>
 </head>
 <body>
 <!-- 링크를 타고 들어가면 나오는 detail 페이지 만들기 -->
-<h5>noticeDetail.jsp</h5>
+<h5>noticeEdit.jsp</h5>
 <%
 /* String seq=request.getParameter("c");
 NoticeDao dao=new NoticeDao();
